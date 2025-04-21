@@ -1,0 +1,117 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fdf6f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Wrapper */
+.chat-wrapper {
+  width: 90%;
+  max-width: 700px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 119, 169, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  overflow: hidden;
+}
+
+/* Chat messages */
+.chat-box {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Messages */
+.message {
+  max-width: 70%;
+  padding: 12px 15px;
+  border-radius: 15px;
+  font-size: 1rem;
+  word-wrap: break-word;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.ai-message {
+  background-color: #fff0f6;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.user-image {
+  align-self: flex-end;
+  text-align: right;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.user-image img {
+  max-width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Input bar */
+.input-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-top: 1px solid #ffd3e2;
+  background-color: #fff7fa;
+}
+
+.input-bar input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ffd3e2;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.input-bar button {
+  background-color: #deacff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.attachment-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #deacff;
+  font-size: 20px;
+}
+.user-prompt {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #444;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 8px;
+  background-color: #e5e5e5;
+  text-align: center;
+}

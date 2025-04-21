@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Image Explainer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script> <!-- For attachment icon -->
+  <script>
+    function clearr(){
+      var promptInput = this.querySelector('input[name="prompt"]');
+      promptInput.value="";
+     
+    }
+  </script>
+  <style>
+    h1{
+      text-align: center;
+    font-style: cursive;
+    margin-top: 25px;
+    color: #797979;
+    font-family: math;
+    width: 57%;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 22%;
+    font-size: 38px;
+    margin-bottom:38px;
+
+    }
+  </style>
+</head>
+<body>
+ 
+  <div class="chat-wrapper">
+    <h1 style="text-align: center;">AI Image Explainer</h1>
+    <div class="chat-box" id="chatBox">      
+    </div>
+
+    <form id="uploadForm" class="input-bar">
+      <label for="imageUpload" class="attachment-icon" title="Attach Image">
+        <i data-lucide="paperclip"></i>
+      </label>
+      <input type="file" id="imageUpload" name="image" accept="image/*" style="display: none;" required />
+
+      <input type="text" name="prompt" id="prompt" placeholder="Type a prompt..." required />
+      <button type="submit" onclick="clearr()">Send</button>
+    </form>
+  </div>
+
+  <script src="/static/script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
